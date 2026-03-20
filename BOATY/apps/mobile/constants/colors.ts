@@ -1,0 +1,32 @@
+export const C = {
+  navyDark: '#0c2545',
+  navy: '#1b3c6c',
+  navyLight: '#2a528a',
+  orange: '#f26a31',
+  orangeLight: '#ff8c5a',
+  cream: '#eeeae6',
+  bg: '#eeeae6',
+  card: '#ffffff',
+  text: '#0c2545',
+  muted: 'rgba(12,37,69,0.45)',
+  border: 'rgba(27,60,108,0.08)',
+  divider: 'rgba(27,60,108,0.07)',
+  success: '#16a34a',
+  successBg: 'rgba(34,197,94,0.12)',
+  warning: '#d97706',
+  danger: '#dc2626',
+  gold: '#c5a059',
+} as const;
+
+export const card = {
+  backgroundColor: '#fff',
+  borderRadius: 16,
+  padding: 16,
+  borderWidth: 1,
+  borderColor: 'rgba(27,60,108,0.08)',
+  shadowColor: '#1b3c6c',
+  shadowOffset: { width: 0, height: 2 },
+  shadowOpacity: 0.06,
+  shadowRadius: 8,
+  elevation: 3,
+} as const;

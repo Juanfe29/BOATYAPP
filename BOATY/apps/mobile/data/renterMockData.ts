@@ -1,0 +1,107 @@
+import { BOAT_IMAGES } from '../constants/images';
+
+export const renterUser = {
+  id: 'user-001',
+  name: 'Alejandro Torres',
+  avatar: '🧑‍💼',
+  rating: 4.8,
+  totalTrips: 12,
+  memberSince: '2025',
+};
+
+export const paymentMethods = [
+  { id: 'pm-1', type: 'visa',       last4: '4242', label: 'Visa',       icon: '💳', isDefault: true  },
+  { id: 'pm-2', type: 'mastercard', last4: '8891', label: 'Mastercard', icon: '💳', isDefault: false },
+  { id: 'pm-3', type: 'nequi',      last4: '',     label: 'Nequi',      icon: '📱', isDefault: false },
+];
+
+export const nearbyBoats = [
+  {
+    id: 'v-001',
+    name: 'Sea Breeze',
+    type: 'Yacht',
+    capacity: 12,
+    image: BOAT_IMAGES.yacht,
+    distanceKm: 1.2,
+    status: 'available',
+    location: { label: 'Bahía de Cartagena' },
+    pricePerDay: 1_800_000,
+    pricePerNightHour: 320_000,
+    rating: 4.9,
+    totalTrips: 128,
+    captain: { name: 'Carlos Mendoza', avatar: '👨‍✈️', rating: 4.87, trips: 342 },
+    description: 'Lujoso yacht perfecto para grupos. Vista panorámica, cubierta de sol y sistema de audio premium.',
+    amenities: ['🧊 Nevera', '🎵 Audio', '☀️ Cubierta', '🤿 Snorkel'],
+  },
+  {
+    id: 'v-002',
+    name: 'Wave Runner',
+    type: 'Lancha',
+    capacity: 6,
+    image: BOAT_IMAGES.lancha,
+    distanceKm: 3.5,
+    status: 'available',
+    location: { label: 'El Rodadero, Santa Marta' },
+    pricePerDay: 850_000,
+    pricePerNightHour: 150_000,
+    rating: 4.7,
+    totalTrips: 95,
+    captain: { name: 'Luis Herrera', avatar: '🧑‍✈️', rating: 4.75, trips: 201 },
+    description: 'Lancha rápida ideal para recorrer la bahía o ir a los arrecifes. Adrenalina garantizada.',
+    amenities: ['🎣 Pesca', '💨 Alta velocidad', '📍 GPS', '🧊 Cooler'],
+  },
+  {
+    id: 'v-003',
+    name: 'Sunset Cruiser',
+    type: 'Catamarán',
+    capacity: 20,
+    image: BOAT_IMAGES.catamaran,
+    distanceKm: 8.0,
+    status: 'available',
+    location: { label: 'San Andrés, Muelle Deportivo' },
+    pricePerDay: 3_500_000,
+    pricePerNightHour: 600_000,
+    rating: 4.95,
+    totalTrips: 67,
+    captain: { name: 'Marina Robles', avatar: '👩‍✈️', rating: 4.96, trips: 89 },
+    description: 'Catamarán espacioso para eventos y grupos grandes. Perfecto para bodas, cumpleaños y corporativos en aguas cristalinas.',
+    amenities: ['🍾 Bar', '🎵 Audio', '🛁 Baño', '⚓ Ancla', '☀️ Cubierta', '🤿 Snorkel'],
+  },
+  {
+    id: 'v-004',
+    name: 'Neptune',
+    type: 'Pesca',
+    capacity: 8,
+    image: BOAT_IMAGES.lancha,
+    distanceKm: 2.1,
+    status: 'available',
+    location: { label: 'Manga, Cartagena' },
+    pricePerDay: 750_000,
+    pricePerNightHour: 120_000,
+    rating: 4.6,
+    totalTrips: 210,
+    captain: { name: 'Roberto Silva', avatar: '👨‍🦱', rating: 4.65, trips: 310 },
+    description: 'Bote de pesca equipado para salidas al mar abierto. Todo el equipo incluido, capitán experto en la zona.',
+    amenities: ['🎣 Cañas', '🐟 Equipo', '🧊 Hielera', '☀️ Toldo'],
+  },
+];
+
+export const renterActiveTrip = {
+  id: 'trip-042',
+  boat: nearbyBoats[0],
+  pickup: 'Muelle de la Bodeguita, Cartagena',
+  destination: 'Islas del Rosario',
+  startTime: new Date(Date.now() - 45 * 60 * 1000),
+  estimatedArrival: new Date(Date.now() + 35 * 60 * 1000),
+  distance: '28 km',
+  status: 'in_progress',
+  fare: 1_800_000,
+};
+
+export const renterTripHistory = [
+  { id: 'h-001', date: '2026-02-25', boat: 'Sea Breeze',      captain: 'Carlos Mendoza', type: 'Yacht',     mode: 'Día',   amount: 1_800_000, status: 'completed', rating: 5   },
+  { id: 'h-002', date: '2026-02-20', boat: 'Wave Runner',     captain: 'Luis Herrera',   type: 'Lancha',    mode: '2h Noche', amount: 300_000, status: 'completed', rating: 4 },
+  { id: 'h-003', date: '2026-02-10', boat: 'Sunset Cruiser',  captain: 'Marina Robles',  type: 'Catamarán', mode: 'Día',   amount: 3_500_000, status: 'completed', rating: 5 },
+  { id: 'h-004', date: '2026-01-28', boat: 'Neptune',         captain: 'Roberto Silva',  type: 'Pesca',     mode: '3h Noche', amount: 360_000, status: 'completed', rating: 4 },
+  { id: 'h-005', date: '2026-01-15', boat: 'Wave Runner',     captain: 'Luis Herrera',   type: 'Lancha',    mode: 'Día',   amount: 850_000,   status: 'cancelled', rating: null },
+];
